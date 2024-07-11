@@ -1,0 +1,15 @@
+
+{% extends "layout.html" %}
+{% block body %}
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function() {
+            $.rebootOps(
+              {"data": [{"select_type": "AuthorizeRoleGroup", "name": "group", "title": "\u5c5e\u7ec4", "option_name": "group_ame", "option_val": "id", "type": "select"}, {"name": "name", "title": "\u89c4\u5219\u540d"}, {"name": "title", "title": "\u6807\u9898"}, {"manualChage": "no", "name": "authorized", "empty": "yes", "title": "\u5df2\u6388\u6743\u7528\u6237"}], "name": "AuthorizeRole", "title": "\u6388\u6743\u89c4\u5219"}
+            )
+        })
+    </script>
+{% endblock %}
+

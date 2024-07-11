@@ -1,0 +1,15 @@
+
+{% extends "layout.html" %}
+{% block body %}
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function() {
+            $.rebootOps(
+              {"data": [{"select_type": "caninet", "type": "select", "name": "caninet", "title": "\u673a\u67dc"}, {"name": "name", "title": "\u8bbe\u5907\u540d\u79f0"}, {"name": "model_no", "empty": "yes", "title": "\u578b\u53f7"}, {"name": "serial_no", "empty": "yes", "title": "\u5e8f\u5217\u53f7"}, {"name": "express_service_code", "empty": "yes", "title": "\u5feb\u901f\u670d\u52a1\u4ee3\u7801"}, {"name": "cpu", "empty": "yes", "title": "CPU"}, {"name": "memory", "empty": "yes", "title": "\u5185\u5b58"}, {"name": "hard_disk", "empty": "yes", "title": "\u786c\u76d8"}, {"name": "raid", "empty": "yes", "title": "RAID\u5361"}, {"name": "other_control_card", "empty": "yes", "title": "\u5176\u4ed6\u63a7\u5236\u5361"}, {"name": "power", "empty": "yes", "title": "\u7535\u6e90"}, {"name": "management_ip", "empty": "yes", "title": "\u7ba1\u7406IP"}, {"type": "date", "name": "purchase_date", "empty": "yes", "title": "\u91c7\u8d2d\u65e5\u671f"}, {"name": "supplier", "empty": "yes", "title": "\u4f9b\u8d27\u5546"}, {"type": "select", "name": "ups", "value": {"0": "\u5f00\u542f", "1": "\u5173\u95ed"}, "title": "\u662f\u5426\u5f00\u542f"}], "name": "device", "title": "\u8bbe\u5907\u7ba1\u7406"}
+            )
+        })
+    </script>
+{% endblock %}
+

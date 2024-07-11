@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>一键备份网络设备配置</title>
+<link href="/static/vendor/prism/prism.css" rel="stylesheet" />
+</head>
+
+<body>
+  <ul>
+    {% for result in data %}
+      <li>
+        {{result["DeviceName"]}} : {{result["ReturnMSG"]}}<br />
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
+

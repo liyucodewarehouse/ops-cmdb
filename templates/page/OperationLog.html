@@ -1,0 +1,15 @@
+
+{% extends "layout.html" %}
+{% block body %}
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function() {
+            $.rebootOps(
+              {"showAddBtn": "no", "showDeleteBtn": "no", "name": "OperationLog", "title": "\u64cd\u4f5c\u65e5\u5fd7\u8bb0\u5f55", "data": [{"name": "Timestamp", "title": "\u65f6\u95f4\u6233"}, {"name": "User", "title": "\u7528\u6237"},{"name": "Entryip", "title": "\u767b\u5f55\u5730\u5740"}, {"name": "Level", "title": "\u65e5\u5fd7\u7b49\u7ea7"}, {"name": "Messages", "title": "\u65e5\u5fd7\u4fe1\u606f"}], "showUpdateBtn": "no"}
+            )
+        })
+    </script>
+{% endblock %}
+

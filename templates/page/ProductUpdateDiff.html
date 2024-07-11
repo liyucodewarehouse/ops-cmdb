@@ -1,0 +1,15 @@
+
+{% extends "layout.html" %}
+{% block body %}
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function() {
+            $.rebootOps(
+              {"showAddBtn": "no", "showDeleteBtn": "no", "name": "ProductUpdateDiff", "title": "\u751f\u4ea7\u66f4\u65b0", "customizedButton": [{"url": "/viewProductUpdateDiff/", "text": "\u4ee3\u7801\u5ba1\u6838", "name": "viewProductUpdateDiff", "title": "\u4ee3\u7801\u5ba1\u6838"}], "data": [{"manualChage": "no", "hide": "true", "name": "UUID", "title": "UUID"}, {"manualChage": "no", "name": "Timestamp", "title": "\u65f6\u95f4\u6233"}, {"manualChage": "no", "name": "HostName", "title": "\u4e3b\u673a\u540d"}, {"manualChage": "no", "name": "PackageLocation", "title": "\u66f4\u65b0\u5305\u4f4d\u7f6e"}, {"manualChage": "no", "hide": "true", "name": "DiffFileLocation", "title": "Diff\u6587\u4ef6\u4f4d\u7f6e"}, {"name": "Title", "title": "\u66f4\u65b0\u4e3b\u9898"}, {"type": "select", "name": "ProjectLeader", "value": {"\u4e01\u519b\u6770": "\u4e01\u519b\u6770", "\u90d1\u91d1\u8c61": "\u90d1\u91d1\u8c61", "\u5218\u8fdc\u751f": "\u5218\u8fdc\u751f", "\u7b26\u4e39": "\u7b26\u4e39", "\u90b1\u4e39": "\u90b1\u4e39", "\u9093\u53ef": "\u9093\u53ef"}, "title": "\u66f4\u65b0\u7533\u8bf7\u4eba"}, {"type": "select", "name": "Executor", "value": {"\u90d1\u660e\u5b87": "\u90d1\u660e\u5b87", "\u6613\u6167\u519b": "\u6613\u6167\u519b", "\u5218\u8fdc\u751f": "\u5218\u8fdc\u751f", "\u674e\u4e39\u534e": "\u674e\u4e39\u534e"}, "title": "\u6267\u884c\u4eba"}, {"manualChage": "no", "name": "Status", "title": "\u66f4\u65b0\u72b6\u6001"}, {"default": "0", "name": "restart_times", "title": "\u91cd\u542f\u6b21\u6570"}], "showUpdateBtn": "yes"}
+            )
+        })
+    </script>
+{% endblock %}
+

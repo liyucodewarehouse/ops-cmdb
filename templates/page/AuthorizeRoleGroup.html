@@ -1,0 +1,15 @@
+
+{% extends "layout.html" %}
+{% block body %}
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function() {
+            $.rebootOps(
+              {"auto_increment": 5000, "data": [{"name": "group_ame", "title": "\u7ec4\u540d"}, {"manualChage": "no", "name": "include_role", "empty": "yes", "title": "\u5305\u542b\u6a21\u5757"}], "name": "AuthorizeRoleGroup", "title": "\u6388\u6743\u89c4\u5219\u7ec4"}
+            )
+        })
+    </script>
+{% endblock %}
+

@@ -1,0 +1,15 @@
+
+{% extends "layout.html" %}
+{% block body %}
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function() {
+            $.rebootOps(
+              {"showAddBtn": "no", "showDeleteBtn": "no", "name": "SMSHistory", "title": "\u77ed\u4fe1\u53d1\u9001\u8bb0\u5f55", "data": [{"name": "MSG_TIM", "title": "\u65f6\u95f4\u6233"}, {"name": "UserName", "title": "\u77ed\u4fe1\u63a5\u6536\u4eba"}, {"name": "USRMP", "title": "\u624b\u673a\u53f7\u7801"}, {"name": "SMSCONTENT", "title": "\u77ed\u4fe1\u5185\u5bb9"}, {"name": "RETURNMESSAGE", "title": "\u8fd4\u56de\u4fe1\u606f"}, {"name": "ERRORCODE", "title": "\u72b6\u6001\u7801"}, {"name": "RSPCOD", "title": "RSPCOD"}], "showUpdateBtn": "no"}
+            )
+        })
+    </script>
+{% endblock %}
+

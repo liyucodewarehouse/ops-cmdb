@@ -1,0 +1,15 @@
+
+{% extends "layout.html" %}
+{% block body %}
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function() {
+            $.rebootOps(
+              {"showAddBtn": "no", "showDeleteBtn": "no", "customizedButtonAtHeader": [{"url": "/downloadHostDailyCheck", "text": "\u6253\u5305\u4e0b\u8f7d", "name": "downloadHostDailyCheck", "title": "\u6253\u5305\u4e0b\u8f7d"}], "name": "HostDailyCheck", "title": "\u67e5\u770b\u5de1\u68c0\u7ed3\u679c", "customizedButton": [{"url": "/viewHostDailyCheck/", "text": "\u67e5\u770b", "name": "view", "title": "\u67e5\u770b\u6700\u65b0\u5de1\u68c0\u7ed3\u679c"}], "data": [{"name": "Hostname", "title": "\u4e3b\u673a\u540d"}, {"name": "LastCheck", "title": "\u6700\u8fd1\u4e00\u6b21\u68c0\u67e5"}, {"name": "FilePath", "title": "\u6587\u4ef6\u8def\u5f84"}], "showUpdateBtn": "no"}
+            )
+        })
+    </script>
+{% endblock %}
+

@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="main">
+          <h1 class="page-header">Dashboard</h1>
+          <h2 class="sub-header col-lg-12">生产更新</h2>
+           <div class="col-lg-12">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>产品线</th>
+                  <th>#</th>
+                  <th>本周重启</th>
+                  <th>本月重启</th>
+                  <th>30天重启</th>
+                  <th>#</th>
+                  <th>本周可用性</th>
+                  <th>本月可用性</th>
+                  <th>30天可用性</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for result in updateData.productRestartTimes %}
+                <tr>
+                  <td>{{result.app}}</td>
+                  <td>|</td>
+                  <td>{{result.productWeeklyRestart}} 次</td>
+                  <td>{{result.productMonthlyRestart}} 次</td>
+                  <td>{{result.productThirtyDaysRestart}} 次</td>
+                  <td>|</td>
+				  {% for availability in updateData.serviceAvailability %}
+					{% if availability.app == result.app %}
+					  <td>{{availability.WeeklyAvailability}}%</td>
+					  <td>{{availability.MonthlyAvailability}}%</td>
+					  <td>{{availability.ThirtyDaysAvailability}}%</td>
+					 {% endif %}
+				  {% endfor %}
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+			</div>
+           <div class="col-lg-6">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>主机名</th>
+                  <th>本周更新</th>
+                  <th>本月更新</th>
+                  <th>30天更新</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for result in updateData.productUpdateFrequency %}
+                <tr>
+                  <td>{{result.HostName}}</td>
+                  <td>{{result.productWeeklyUpdate}} 次</td>
+                  <td>{{result.productMonthlyUpdate}} 次</td>
+                  <td>{{result.productThirtyDaysUpdate}} 次</td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+			</div>
+			<div class="col-lg-6">
+			<table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>开发</th>
+                  <th>本周更新</th>
+                  <th>本月更新</th>
+                  <th>30天更新</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for result in updateData.developerUpdateFrequency %}
+                <tr>
+                  <td>{{result.developer}}</td>
+                  <td>{{result.developerWeeklyUpdate}} 次</td>
+                  <td>{{result.developerMonthlyUpdate}} 次</td>
+                  <td>{{result.developerThirtyDaysUpdate}} 次</td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+            </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}
+{% block js %}
+{% endblock %}
+
+
+

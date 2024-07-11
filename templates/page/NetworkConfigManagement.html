@@ -1,0 +1,15 @@
+
+{% extends "layout.html" %}
+{% block body %}
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function() {
+            $.rebootOps(
+              {"showAddBtn": "no", "showDeleteBtn": "no", "customizedButtonAtHeader": [{"url": "/downloadNetworkConfig", "text": "\u6253\u5305\u4e0b\u8f7d", "name": "downloadNetworkConfig", "title": "\u6253\u5305\u4e0b\u8f7d\u6700\u65b0\u914d\u7f6e"}], "name": "NetworkConfigManagement", "title": "\u67e5\u770b\u6700\u65b0\u914d\u7f6e", "customizedButton": [{"url": "/viewNetworkConfig/", "text": "\u67e5\u770b", "name": "viewLatestConfig", "title": "\u67e5\u770b\u6700\u65b0\u5907\u4efd"}, {"url": "/viewNetworkConfigDiff/", "text": "\u6bd4\u8f83", "name": "viewNetworkConfigDiff", "title": "\u67e5\u770b\u914d\u7f6e\u5bf9\u6bd4"}], "data": [{"name": "DeviceName", "title": "\u8bbe\u5907\u540d"}, {"name": "LastCheckTime", "title": "\u65f6\u95f4\u6233"}, {"name": "ConfigFilePath", "title": "\u914d\u7f6e\u6587\u4ef6\u8def\u5f84"}], "showUpdateBtn": "no"}
+            )
+        })
+    </script>
+{% endblock %}
+

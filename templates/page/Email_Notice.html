@@ -1,0 +1,15 @@
+
+{% extends "layout.html" %}
+{% block body %}
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function() {
+            $.rebootOps(
+              {"showAddBtn": "no", "showDeleteBtn": "no", "name": "Email_Notice", "title": "\u90ae\u4ef6\u901a\u77e5", "data": [{"name": "project", "title": "\u9879\u76ee\u540d"}, {"name": "content", "title": "\u5185\u5bb9"}, {"name": "enclosure", "title": "\u9644\u4ef6"}, {"name": "Timestamp", "title": "\u65f6\u95f4\u6233"}],"showUpdateBtn": "no"}
+            )
+        })
+    </script>
+{% endblock %}
+

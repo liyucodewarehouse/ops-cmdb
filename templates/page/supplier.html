@@ -1,0 +1,15 @@
+
+{% extends "layout.html" %}
+{% block body %}
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function() {
+            $.rebootOps(
+              {"data": [{"name": "supplier_name", "empty": "yes", "title": "\u516c\u53f8\u540d\u79f0"}, {"name": "staff_name", "title": "\u8054\u7cfb\u4eba"}, {"name": "duties", "empty": "yes", "title": "\u804c\u52a1"}, {"name": "phone", "empty": "yes", "title": "\u56fa\u8bdd"}, {"name": "mobile", "empty": "yes", "title": "\u624b\u673a"}, {"name": "qq", "empty": "yes", "title": "QQ"}, {"name": "email", "empty": "yes", "title": "EMAIL"}], "name": "supplier", "title": "\u4f9b\u5e94\u5546\u7ba1\u7406"}
+            )
+        })
+    </script>
+{% endblock %}
+

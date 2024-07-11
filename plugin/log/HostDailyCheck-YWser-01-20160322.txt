@@ -1,0 +1,381 @@
+
+
+############################ 系统检查 ############################
+     系统：GNU/Linux
+ 发行版本：CentOS release 6.4 (Final)
+     内核：2.6.32-358.el6.x86_64
+   主机名：YWser-01
+  SELinux：Disabled
+语言/编码：zh_CN.UTF-8
+ 当前时间：2016-03-22 13:29:02
+ 最后启动：11:44 
+ 运行时间：12 days
+
+
+############################ CPU检查 #############################
+物理CPU个数:0
+逻辑CPU个数:1
+每CPU核心数:
+    CPU型号:Intel(R) Xeon(R) CPU E5-2603 0 @ 1.80GHz
+    CPU架构:x86_64
+
+
+############################ 内存检查(MB) ########################
+             total       used       free     shared    buffers     cached
+Mem:          3954       3556        397          0        144       2880
+Swap:         4095          0       4095
+
+
+############################ 磁盘检查 ############################
+文件系统   类型   |  容量  已用  可用  已用%%  |  Inode  已用(I)  可用(I)  已用(I)%%  |  挂载点
+/dev/sda3  ext4   |  193G  20G   164G  11%     |  13M    50K      13M      1%         |  /
+tmpfs      tmpfs  |  1.9G  0     1.9G  0%      |  479K   1        479K     1%         |  /dev/shm
+/dev/sda1  ext4   |  504M  37M   443M  8%      |  32K    38       32K      1%         |  /boot
+
+
+############################ 网络检查 ############################
+eth0      Link encap:Ethernet  HWaddr 00:0C:29:31:83:7D  
+          inet addr:172.23.20.201  Bcast:172.23.20.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX bytes:7699657705 (7.1 GiB)  TX bytes:22416973076 (20.8 GiB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX bytes:99265825 (94.6 MiB)  TX bytes:99265825 (94.6 MiB)
+
+
+网关：172.23.20.1
+ DNS：211.162.78.3
+
+
+############################ 监听检查 ############################
+Proto Recv-Q Send-Q Local Address               Foreign Address             State       PID/Program name   
+tcp        0      0 0.0.0.0:111                 0.0.0.0:*                   LISTEN      1129/rpcbind        
+tcp        0      0 0.0.0.0:8080                0.0.0.0:*                   LISTEN      30564/python        
+tcp        0      0 0.0.0.0:22                  0.0.0.0:*                   LISTEN      1181/sshd           
+tcp        0      0 127.0.0.1:25                0.0.0.0:*                   LISTEN      1425/master         
+tcp        0      0 0.0.0.0:443                 0.0.0.0:*                   LISTEN      37695/nginx         
+tcp        0      0 127.0.0.1:199               0.0.0.0:*                   LISTEN      1170/snmpd          
+tcp        0      0 0.0.0.0:3306                0.0.0.0:*                   LISTEN      60404/mysqld        
+tcp        0      0 :::111                      :::*                        LISTEN      1129/rpcbind        
+tcp        0      0 :::80                       :::*                        LISTEN      10080/httpd         
+tcp        0      0 :::22                       :::*                        LISTEN      1181/sshd           
+tcp        0      0 ::1:25                      :::*                        LISTEN      1425/master         
+tcp        0      0 :::6556                     :::*                        LISTEN      1189/xinetd         
+udp        0      0 0.0.0.0:37357               0.0.0.0:*                               1111/rsyslogd       
+udp        0      0 0.0.0.0:111                 0.0.0.0:*                               1129/rpcbind        
+udp        0      0 0.0.0.0:880                 0.0.0.0:*                               1129/rpcbind        
+udp        0      0 172.23.20.201:123           0.0.0.0:*                               16472/ntpd          
+udp        0      0 127.0.0.1:123               0.0.0.0:*                               16472/ntpd          
+udp        0      0 0.0.0.0:123                 0.0.0.0:*                               16472/ntpd          
+udp        0      0 0.0.0.0:161                 0.0.0.0:*                               1170/snmpd          
+udp        0      0 0.0.0.0:54744               0.0.0.0:*                               1111/rsyslogd       
+udp        0      0 :::111                      :::*                                    1129/rpcbind        
+udp        0      0 :::880                      :::*                                    1129/rpcbind        
+udp        0      0 fe80::20c:29ff:fe31:837d:123 :::*                                    16472/ntpd          
+udp        0      0 ::1:123                     :::*                                    16472/ntpd          
+udp        0      0 :::123                      :::*                                    16472/ntpd          
+
+
+############################ 进程检查 ############################
+
+内存占用TOP10
+-------------
+PID    %MEM  RSS    COMMAND
+60404  1.3   54876  /usr/libexec/mysqld
+10080  0.6   27332  /usr/sbin/httpd
+47844  0.6   27292  /usr/sbin/httpd
+19353  0.6   27288  /usr/sbin/httpd
+16315  0.6   27100  /usr/sbin/httpd
+23206  0.6   27048  /usr/sbin/httpd
+47346  0.6   26756  /usr/sbin/httpd
+16486  0.6   25468  /usr/sbin/httpd
+38659  0.5   23464  /usr/bin/php
+21934  0.5   23064  /usr/sbin/httpd
+
+CPU占用TOP10
+------------
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                      
+38663 root      20   0  277m 5912 2796 S 15.6  0.1   0:00.19 spine                                                        
+60404 mysql     20   0  703m  53m 5780 S 13.7  1.4 342:05.00 mysqld                                                       
+38846 root      20   0  299m  19m 7920 S  7.8  0.5   0:00.13 php                                                          
+38723 root      20   0  298m  19m 7728 S  2.0  0.5   0:00.13 php                                                          
+    1 root      20   0 19232 1180  884 S  0.0  0.0   0:10.85 init                                                         
+    2 root      20   0     0    0    0 S  0.0  0.0   0:00.01 kthreadd                                                     
+    3 root      RT   0     0    0    0 S  0.0  0.0   0:00.00 migration/0                                                  
+    4 root      20   0     0    0    0 S  0.0  0.0   0:52.33 ksoftirqd/0                                                  
+    5 root      RT   0     0    0    0 S  0.0  0.0   0:00.00 migration/0                                                  
+    6 root      RT   0     0    0    0 S  0.0  0.0   0:16.07 watchdog/0                                                   
+
+
+############################ 服务检查 ############################
+
+服务配置
+--------
+auditd      0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+crond       0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+filebeat    0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+httpd       0:关闭  1:关闭  2:启用  3:启用  4:关闭  5:启用  6:关闭
+ip6tables   0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+iptables    0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+messagebus  0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+mkeventd    0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+mysqld      0:关闭  1:关闭  2:启用  3:启用  4:关闭  5:启用  6:关闭
+nagios      0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+ndo2db      0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+netfs       0:关闭  1:关闭  2:关闭  3:启用  4:启用  5:启用  6:关闭
+network     0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+nginx       0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+npcd        0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+ntpd        0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+postfix     0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+rpcbind     0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+rsyslog     0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+snmpd       0:关闭  1:关闭  2:启用  3:启用  4:关闭  5:启用  6:关闭
+sshd        0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+sysstat     0:关闭  1:启用  2:启用  3:启用  4:启用  5:启用  6:关闭
+udev-post   0:关闭  1:启用  2:启用  3:启用  4:启用  5:启用  6:关闭
+xinetd      0:关闭  1:关闭  2:启用  3:启用  4:启用  5:启用  6:关闭
+
+正在运行的服务
+--------------
+auditd (pid  1095) 正在运行...
+crond (pid  1443) 正在运行...
+filebeat-god (pid  1458) 正在运行...
+httpd (pid  21934) 正在运行...
+messagebus (pid  1139) 正在运行...
+mysqld (pid  60404) 正在运行...
+nagios (pid 15147) is running...
+nginx (pid  37695) 正在运行...
+npcd (pid 1537) is running...
+ntpd (pid  16472) 正在运行...
+master (pid  1425) 正在运行...
+rpcbind (pid  1129) 正在运行...
+rsyslogd (pid  1111) 正在运行...
+snmpd (pid  1170) 正在运行...
+openssh-daemon (pid  1181) 正在运行...
+xinetd (pid  1189) 正在运行...
+
+
+############################ 自启动检查 ##########################
+touch /var/lock/subsys/local
+
+
+############################ 登录检查 ############################
+root     pts/0        192.168.140.102  Tue Mar 22 13:17   still logged in   
+root     pts/0        192.168.140.102  Mon Mar 21 13:50 - 15:30  (01:40)    
+root     pts/0        192.168.140.102  Mon Mar 21 10:21 - 10:35  (00:13)    
+root     pts/0        192.168.140.102  Fri Mar 18 10:26 - 12:08  (01:41)    
+root     pts/0        192.168.140.102  Fri Mar 18 09:02 - 09:37  (00:35)    
+root     pts/0        192.168.140.102  Thu Mar 17 16:51 - 17:03  (00:11)    
+root     pts/0        192.168.140.102  Thu Mar 17 16:25 - 16:31  (00:06)    
+root     pts/0        192.168.140.102  Thu Mar 17 14:33 - 14:48  (00:15)    
+root     pts/0        192.168.140.102  Thu Mar 17 08:46 - 11:20  (02:33)    
+root     pts/1        192.168.140.102  Wed Mar 16 17:15 - 19:11  (01:55)    
+
+
+############################ 计划任务检查 ########################
+root
+--------
+*/30 * * * * source /etc/profile;/root/bin/update_ntp.sh
+*/1 * * * *  /usr/bin/php /var/www/html/poller.php > /dev/null 2>&1
+
+#掉单处理
+20 2 * * * cd /root/bin/product_lost_order_alert/;python /root/bin/product_lost_order_alert/product_lost_order_alert.py
+#更新HRCMDB的设备信息
+30 2 * * * sh /root/bin/updateHostinfo.sh > /dev/null
+#每日巡检
+40 2 * * * sh /root/bin/HostDailyCheck/HostDailyCheck.sh > /dev/null
+
+-rw-r--r--.  1  root  root  113  7月  19  2011  /etc/cron.d/0hourly
+-rw-r--r--.  1  root  root  235  6月  22  2012  /etc/cron.d/sysstat
+-rwxr-xr-x.  1  root  root  196  8月  16  2012  /etc/cron.daily/logrotate
+-rwxr-xr-x.  1  root  root  905  2月  22  2013  /etc/cron.daily/makewhatis.cron
+-rw-r--r--.  1  root  root  0    7月  19  2011  /etc/cron.deny
+-rwxr-xr-x.  1  root  root  424  7月  19  2011  /etc/cron.hourly/0anacron
+-rw-r--r--   1  root  root  618  6月  6   2014  /etc/crontab
+
+
+############################ 用户检查 ############################
+/etc/passwd 最后修改时间：2016-03-16 16:51:53 (5 天 20 小时前)
+
+特权用户
+--------
+root
+
+用户列表
+--------
+root:x:0:0:root:/root:/bin/bash
+mysql:x:27:27:MySQL Server:/var/lib/mysql:/bin/bash
+nagios:x:500:500::/home/nagios:/bin/bash
+
+空密码用户
+----------
+
+mysql
+nagios
+
+相同ID的用户
+------------
+
+
+############################ 密码检查 ############################
+
+密码过期检查
+------------
+root            永不过期
+mysql           永不过期
+nagios          永不过期
+
+密码策略检查
+------------
+PASS_MAX_DAYS	99999
+PASS_MIN_DAYS	0
+PASS_MIN_LEN	5
+PASS_WARN_AGE	7
+
+
+############################ Sudoers检查 #########################
+root	ALL=(ALL) 	ALL
+nagios ALL=NOPASSWD: /usr/bin/chage -l *
+User_Alias      CENTREON=apache,nagios
+CENTREON   ALL = NOPASSWD: /etc/init.d/nagios* restart
+CENTREON   ALL = NOPASSWD: /etc/init.d/nagios restart
+CENTREON   ALL = NOPASSWD: /etc/init.d/nagios* reload
+CENTREON   ALL = NOPASSWD: /etc/init.d/nagios reload
+CENTREON   ALL = NOPASSWD: /usr/local/nagios/bin/nagios* -v *
+CENTREON   ALL = NOPASSWD: /usr/local/nagios/bin/nagios -v *
+CENTREON   ALL = NOPASSWD: /usr/local/nagios/bin/nagios* -s *
+CENTREON   ALL = NOPASSWD: /usr/local/nagios/bin/nagios -s *
+CENTREON   ALL = NOPASSWD: /etc/init.d/ndo2db* restart
+CENTREON   ALL = NOPASSWD: /etc/init.d/ndo2db restart
+CENTREON   ALL = NOPASSWD: /etc/init.d/ndo2db* reload
+CENTREON   ALL = NOPASSWD: /etc/init.d/ndo2db reload
+root    ALL=(ALL)       ALL
+apache ALL=NOPASSWD:/etc/rc.d/init.d/nagios,/sbin/sudo,/usr/local/nagios/bin/nagios
+apache ALL = (root) NOPASSWD: /usr/local/check_mk/bin/check_mk --automation *
+
+
+
+############################ JDK检查 #############################
+JAVA_HOME=""
+
+
+############################ 防火墙检查 ##########################
+iptables: 已运行
+
+/etc/sysconfig/iptables
+-----------------------
+# Generated by iptables-save v1.4.7 on Fri Jun  6 11:24:01 2014
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [61441661:6350248901]
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT 
+-A INPUT -p icmp -j ACCEPT 
+-A INPUT -i lo -j ACCEPT 
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT 
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT 
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 8080 -j ACCEPT 
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 25 -j ACCEPT 
+-A INPUT -p udp -m state --state NEW -m udp --dport 161 -j ACCEPT 
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 443 -j ACCEPT 
+-A INPUT -p udp -m state --state NEW -m udp --dport 514 -j ACCEPT 
+-A INPUT -p udp -m state --state NEW -m udp --dport 123 -j ACCEPT
+-A INPUT -j REJECT --reject-with icmp-host-prohibited 
+-A FORWARD -j REJECT --reject-with icmp-host-prohibited 
+COMMIT
+# Completed on Fri Jun  6 11:24:01 2014
+
+
+############################ SSH检查 #############################
+服务状态：openssh-daemon (pid  1181) 正在运行...
+SSH协议版本：2
+
+信任主机
+--------
+
+是否允许ROOT远程登录
+--------------------
+PermitRootLogin yes
+
+/etc/ssh/sshd_config
+--------------------
+Protocol 2
+SyslogFacility AUTHPRIV
+PasswordAuthentication yes
+ChallengeResponseAuthentication no
+GSSAPIAuthentication yes
+GSSAPICleanupCredentials yes
+UsePAM yes
+AcceptEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES
+AcceptEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT
+AcceptEnv LC_IDENTIFICATION LC_ALL LANGUAGE
+AcceptEnv XMODIFIERS
+X11Forwarding yes
+Subsystem	sftp	/usr/libexec/openssh/sftp-server
+
+
+############################ syslog检查 ##########################
+服务状态：rsyslogd (pid  1111) 正在运行...
+
+/etc/rsyslog.conf
+-----------------
+*.*                                       >localhost,syslog,cactiuser,www.cnyunwei.com;cacti_syslog
+*.info;mail.none;authpriv.none;cron.none  /var/log/messages
+*.info;mail.none;cron.none                @172.33.20.124
+*.info;mail.none;cron.none                @172.23.20.202
+authpriv.*                                /var/log/secure
+mail.*                                    -/var/log/maillog
+cron.*                                    /var/log/cron
+*.emerg                                   *
+uucp,news.crit                            /var/log/spooler
+local7.*                                  /var/log/boot.log
+
+
+############################ SNMP检查 ############################
+服务状态：snmpd (pid  1170) 正在运行...
+
+/etc/snmp/snmpd.conf
+--------------------
+com2sec notConfigUser default ryf
+group   notConfigGroup v1           notConfigUser
+group   notConfigGroup v2c           notConfigUser
+view    systemview    included   .1.3.6.1.2.1.1
+view    systemview    included   .1.3.6.1.2.1.25.1.1
+access  notConfigGroup ""      any       noauth    exact  all	 none none
+view all    included  .1                               80
+view mib2   included  .iso.org.dod.internet.mgmt.mib-2 fc
+syslocation Unknown (edit /etc/snmp/snmpd.conf)
+syscontact Root <root@localhost> (configure /etc/snmp/snmp.local.conf)
+dontLogTCPWrappersConnects yes
+
+
+############################ NTP检查 #############################
+服务状态：ntpd (pid  16472) 正在运行...
+
+/etc/ntp.conf
+-------------
+restrict 172.23.20.0 mask 255.255.255.0  nomodify notrap 
+restrict 172.23.10.0 mask 255.255.255.0  nomodify notrap 
+restrict 172.33.20.0 mask 255.255.255.0  nomodify notrap 
+restrict 127.0.0.1
+server cn.ntp.org.cn prefer
+server  127.127.1.0
+fudge   127.127.1.0 stratum 8
+driftfile /var/lib/ntp/drift
+keys /etc/ntp/keys
+
+
+############################ 软件检查 ############################
+nginx-1.0.15-12.el6.x86_64                            2016年03月16日  星期三  16时51分53秒
+nginx-filesystem-1.0.15-12.el6.noarch                 2016年03月16日  星期三  16时51分52秒
+geoipupdate-2.2.1-2.el6.x86_64                        2016年03月16日  星期三  16时51分52秒
+GeoIP-GeoLite-data-extra-2015.12-1.el6.noarch         2016年03月16日  星期三  16时51分52秒
+GeoIP-GeoLite-data-2015.12-1.el6.noarch               2016年03月16日  星期三  16时51分52秒
+GeoIP-1.6.5-1.el6.x86_64                              2016年03月16日  星期三  16时51分52秒
+MySQL-python-1.2.3-0.3.c1.1.el6.x86_64                2016年03月15日  星期二  15时27分04秒
+filebeat-1.1.1-1.x86_64                               2016年03月02日  星期三  13时18分10秒
+traceroute-2.0.14-2.el6.x86_64                        2015年10月15日  星期四  11时00分43秒
+oracle-instantclient12.1-sqlplus-12.1.0.2.0-1.x86_64  2015年09月07日  星期一  13时09分03秒

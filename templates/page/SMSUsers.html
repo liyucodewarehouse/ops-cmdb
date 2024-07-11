@@ -1,0 +1,15 @@
+
+{% extends "layout.html" %}
+{% block body %}
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function() {
+            $.rebootOps(
+              {"data": [{"name": "UserName", "title": "\u7528\u6237\u540d"}, {"name": "Mobile", "title": "\u624b\u673a\u53f7\u7801"}], "name": "SMSUsers", "title": "\u77ed\u4fe1\u63a5\u6536\u7528\u6237"}
+            )
+        })
+    </script>
+{% endblock %}
+

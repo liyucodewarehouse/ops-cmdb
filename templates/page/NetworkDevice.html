@@ -1,0 +1,15 @@
+
+{% extends "layout.html" %}
+{% block body %}
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function() {
+            $.rebootOps(
+              {"customizedButtonAtHeader": [{"url": "/backupAllNetworkConfig", "text": "\u4e00\u952e\u5907\u4efd", "name": "backupAllNetworkConfig", "title": "\u70b9\u51fb\u4e00\u952e\u5907\u4efd"}], "customizedButton": [{"url": "/fetchOneNetworkConfig/", "text": "\u5907\u4efd", "name": "fetchOneNetworkConfig", "title": "\u70b9\u51fb\u5907\u4efd"}], "data": [{"name": "DeviceName", "title": "\u8bbe\u5907\u540d"}, {"name": "IPAddr", "title": "\u7ba1\u7406IP"}, {"name": "Username", "title": "\u7528\u6237\u540d"}, {"name": "Passwd", "title": "\u5bc6\u7801"}], "name": "NetworkDevice", "title": "\u67e5\u770b\u8bbe\u5907\u4fe1\u606f"}
+            )
+        })
+    </script>
+{% endblock %}
+

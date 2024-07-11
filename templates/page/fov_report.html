@@ -1,0 +1,15 @@
+
+{% extends "layout.html" %}
+{% block body %}
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function() {
+            $.rebootOps(
+              {"showAddBtn": "yes", "showDeleteBtn": "yes", "name": "fov_report", "title": "\u5168\u91cf\u0066\u006f\u0076", "data": [{"name": "line", "title": "\u7ebf\u4f53"}, {"name": "model", "title": "\u673a\u79cd\u540d"}, {"name": "path", "title": "\u5b58\u653e\u8def\u5f84"}, {"name": "notes", "title": "\u5907\u6ce8"}, {"name": "Timestamp", "title": "\u65f6\u95f4\u6233"}],"showUpdateBtn": "yes"}
+            )
+        })
+    </script>
+{% endblock %}
+
